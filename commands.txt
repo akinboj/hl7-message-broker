@@ -1,0 +1,7 @@
+# Build docker image
+docker build --rm -t interface-hl7message-broker:1.0.0-snapshot --file Dockerfile .
+
+# Deploy to microservice
+helm upgrade interface-hl7message-broker-site-a --install --namespace site-a --set serviceName=interface-hl7message-broker,mqUser=integration,basePort=30470,imageTag=1.0.0-snapshot,numOfPods=1 helm
+
+http://interface-hl7message-broker.site-a:30470
