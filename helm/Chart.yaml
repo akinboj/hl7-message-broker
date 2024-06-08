@@ -1,0 +1,5 @@
+---
+name: hl7-message-broker
+version: 1.0.0-SNAPSHOT
+description: HL7Messaging - Message Broker
+icon: img/icons/camel.svg
